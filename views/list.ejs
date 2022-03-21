@@ -7,7 +7,13 @@
     <title>To-Do list</title>
 </head>
 <body>
-    <h1>Today is <%= data.kindOfDay %></h1>
-    <p><%= data.dayType %></p>    
+    <% if(data.kindOfDay === "Saturday" || data.kindOfDay === "Sunday") { %> 
+        <h1 style="color: blueviolet;">Today is <%= data.kindOfDay %></h1>
+        <p style="color: blueviolet;"><%= data.dayType %></p>  
+    <% } else { %>
+        <h1 style="color: rgb(43, 165, 226);">Today is <%= data.kindOfDay %></h1>
+        <p style="color: rgb(43, 165, 226);"><%= data.dayType %></p> 
+    <% } %>
+      
 </body>
 </html>
